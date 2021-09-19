@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block content %}
+    <h1>Home Page</h1>
+    <p>Home Page</p>
+    <p>
+        {{ example }}
+    </p>
+
+    <ul>
+    {% for item in example_list %}
+        {% if abc == 312 %}
+            <li>{{ forloop.counter }} - {{ item|add:22 }}</li>
+        {% else %}
+            <li>{{ forloop.counter }} - {{ item }}</li>
+        {% endif %}
+    {% endfor %}
+    </ul>
+
+{% endblock %}
+
